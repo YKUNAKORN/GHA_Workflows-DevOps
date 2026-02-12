@@ -1,0 +1,5 @@
+{
+    "app_name": "Openai",
+    "version": 2.5,
+    "features": ["auth", "payment"]
+}

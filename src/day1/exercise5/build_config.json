@@ -1,0 +1,5 @@
+{
+  "project": "PaymentGateway",
+  "environment": "production",
+  "retry_count": 3
+}
