@@ -1,4 +1,1 @@
-dot-env
-os
-sys
-json
+python-dotenv==1.0.0
