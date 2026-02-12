@@ -1,0 +1,29 @@
+name: exercise7
+
+on:
+  push:
+    branches: [ "main" ] 
+
+jobs: 
+  exercise7:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v4
+      
+      - name: Install Python
+        uses: actions/setup-python@v5 
+        with:
+          python-version: '3.11'
+      
+      - name: Run Python Script
+        run: python build.py
+      
+      - name: Check Failure
+        if: failure()  
+        run: echo "Build Failed! Sending Report..."
+
+      - name: Check on branch main and success
+        if: success() && github.ref == 'refs/heads/main'
+        run: echo "Deploying to Production..."

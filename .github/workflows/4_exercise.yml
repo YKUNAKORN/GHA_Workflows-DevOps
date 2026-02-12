@@ -1,0 +1,21 @@
+name: exercise4
+
+on:
+  push:
+    branches: [ "main" ] 
+
+jobs:
+  exercise4:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone git repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:                     
+          python-version: '3.11'  # selcet Python version 3.11
+
+      - name: Check Python version
+        run: python --version     

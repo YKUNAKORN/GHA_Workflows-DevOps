@@ -1,0 +1,8 @@
+steps:
+  # ... (Checkout & Setup Python from previously) ...
+
+  - name: Install dependencies
+    run: |
+      python -m pip install --upgrade pip
+      if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      # หรือถ้าไม่มีไฟล์ requirements จะลงตรงๆ ก็ได้: pip install requests

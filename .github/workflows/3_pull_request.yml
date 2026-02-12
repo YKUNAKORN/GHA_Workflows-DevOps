@@ -1,0 +1,12 @@
+name: pull-requst
+
+on:
+  pull_request:
+    branchs: [ "main" ]
+    # type is a timing to run
+    type: 
+      - opened      # 1. When you hit "Create pull request for first time"
+      - synchronize # 2. When someone Push new code into previous Pull Request (Edit)
+      - reopened    # 3. When it already closed and re-open 
+
+jobs:

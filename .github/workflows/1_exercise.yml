@@ -1,0 +1,17 @@
+name: ci-test
+
+on: [push]
+
+jobs: 
+  ci-test:
+  runs-on: ubuntu-latest
+
+  steps:
+    - name: Write message
+      run: echo "String CI pipeline..."
+    
+    - name: Check actual path of Ubuntu
+      run: pwd
+    
+    - name: List files in actual folder
+      run: ls -la

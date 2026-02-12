@@ -1,0 +1,6 @@
+steps:
+  - name: Run Script with Config
+    env:
+      APP_ENV: "Production"      # ชื่อตัวแปร: ค่า
+      API_KEY: "1234-5678"       # ในงานจริงเราจะใช้ ${{ secrets.MY_KEY }}
+    run: python config_check.py

@@ -1,0 +1,23 @@
+name: exercise6
+
+on: 
+  push:
+    branches: [ "main" ]
+
+jobs:
+  exercise6:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v4
+
+      - name: Install Python 
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Run Deploy Check with ENV
+        env: 
+          DEPLOY_TARGET: "PROD"        
+        run: python check_deploy.py    

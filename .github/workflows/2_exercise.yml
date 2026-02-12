@@ -1,0 +1,14 @@
+name: exercise2
+
+on:
+  push:
+    branches: [ "main", "release/*" ]
+    
+  pull_request:
+    branches: [ "main" ]
+
+jobs:  
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Triggered successfully!"
